@@ -1,0 +1,46 @@
+/* src/assets/slideshow/ImageSlideshow.css */
+
+.slideshow-container {
+  width: 100%; /* Ensure this container always takes full width */
+  height: 100%; /* Make it fill its parent div's height (the 600px div in HeroSection) */
+  /* Remove any max-width property here if you added it previously */
+}
+
+/* Styles for the carousel itself (from react-responsive-carousel) */
+.carousel {
+  width: 80%; /* Make the carousel fill its parent container */
+  height: 80%; /* Make the carousel fill its parent container */
+}
+
+.carousel .slide {
+  height: 100%; /* Each slide fills the carousel's height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel .slide img {
+  width: 80%; /* Image takes full width of its parent (.slide) */
+  height: 80%; /* Image takes full height of its parent (.slide) */
+  object-fit: cover; /* This scales the image to cover the container while maintaining aspect ratio, cropping if necessary */
+}
+
+/* You might need to adjust carousel controls to be visible on your images */
+.carousel .control-arrow,
+.carousel .control-dots .dot {
+  /* Example adjustments for visibility on varied image backgrounds */
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+}
+
+.carousel .control-arrow:before {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #fff; /* White arrows */
+}
+.carousel .control-next.control-arrow:before {
+    border-left: 8px solid #fff;
+}
+.carousel .control-prev.control-arrow:before {
+    border-right: 8px solid #fff;
+}
